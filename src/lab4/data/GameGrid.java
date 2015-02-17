@@ -1,6 +1,7 @@
 package lab4.data;
 import java.util.Arrays;
 import java.util.Observable;
+
 /**
  * Represents the 2-d game grid
  */
@@ -58,6 +59,8 @@ public class GameGrid extends Observable{
 			return false;
 		}else{
 			gameGridArray[x][y] = player;
+			setChanged();
+			notifyObservers();
 			return true;
 		}
 	}
@@ -69,6 +72,8 @@ public class GameGrid extends Observable{
 		for(int i=0;i<getSize();i++){
 			Arrays.fill(gameGridArray[i], EMPTY);
 		}
+		setChanged();
+		notifyObservers();
 	}
 	
 	/**
@@ -76,8 +81,20 @@ public class GameGrid extends Observable{
 	 * 
 	 * @param player the player to check for
 	 * @return true if player has 5 in row, false otherwise
+	 * 
 	 */
 	public boolean isWinner(int player){
+		
+		//Horizontally
+		for(int i=0;i<getSize();i++){
+			for(int j=0;j<getSize();i++){
+				
+			}
+		}
+		//Vertically
+		//Diagonally
+		
+		
 		return true;
 	}
 }
