@@ -86,8 +86,9 @@ public class GameGrid extends Observable{
 	public boolean isWinner(int player){
 		
 		//Horizontally
-		for(int i=0;i<getSize();i++){
-			for(int j=0;j<getSize();i++){
+		for(int x=0;x<getSize();x++){
+			for(int y=0;y<getSize();y++){
+				
 				
 			}
 		}
